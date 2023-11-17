@@ -2,11 +2,11 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
-      },
+        "dev": "concurrently npm:watch:*",
+        "watch:vite": "vite",
+        "watch:artisan": "php artisan serve",
+        "build": "vite build"
+    },
     "devDependencies": {
         "autoprefixer": "^10.4.16",
         "axios": "^1.1.2",
